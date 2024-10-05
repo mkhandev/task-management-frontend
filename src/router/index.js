@@ -8,6 +8,7 @@ import Dashboard from "@/pages/Dashboard.vue";
 import AddTask from "@/pages/AddTask.vue";
 import EditTask from "@/pages/editTask.vue";
 import Register from "@/pages/Register.vue";
+import NotFound from "@/pages/404.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -49,6 +50,7 @@ const router = createRouter({
         },
       ],
     },
+    {path:'/:notFound(.*)*',component:NotFound,name:'404'}
   ],
 });
 
